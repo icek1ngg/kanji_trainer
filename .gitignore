@@ -1,0 +1,60 @@
+# JavaScript dependencies and caches
+node_modules/
+.vite/
+.cache/
+*.tsbuildinfo
+
+# Frontend and desktop build outputs
+/dist/
+/dist-desktop/
+/release/
+/releases/
+/artifacts/
+/src-tauri/target/
+/src-tauri/gen/
+*.exe
+*.msi
+*.msix
+*.pdb
+*.rs.bk
+
+# Automated tests and coverage
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/coverage/
+/.nyc_output/
+
+# Local exports, backups, and authoring scratch files
+/outputs/
+/.codex-work/
+kanji-trainer-backup-*.json
+*.local
+*.log
+*.pid
+*.pid.lock
+*.tmp
+*.temp
+
+# Environment secrets and private signing material
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.key
+*.pem
+*.pfx
+*.p12
+
+# Editors and operating-system files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Keep package-lock.json, src-tauri/Cargo.lock, icons, and vendor/*.tgz tracked.

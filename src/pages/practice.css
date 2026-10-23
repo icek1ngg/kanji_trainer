@@ -1,0 +1,89 @@
+.practice-page { width: 100%; }
+.practice-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:1.5rem; margin-bottom:1.5rem; }
+.practice-heading h1 { margin:0; color:var(--text); font-size:clamp(1.95rem,4vw,3.25rem); font-weight:760; letter-spacing:-.045em; line-height:1.05; }
+.practice-heading p.muted { max-width:42rem; margin:.85rem 0 0; color:var(--text-muted); font-size:.95rem; line-height:1.6; }
+.practice-toolbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:1rem; padding:1rem; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); box-shadow:var(--shadow-sm); }
+.practice-progress { flex:1; min-width:12rem; }
+.practice-progress-line { display:flex; justify-content:space-between; gap:1rem; margin-bottom:.45rem; color:var(--text-muted); font-size:.74rem; font-weight:650; }
+.practice-progress-line strong { color:var(--text); }
+.practice-progress progress { display:block; width:100%; height:.48rem; border:0; border-radius:99px; overflow:hidden; background:var(--surface-soft); appearance:none; }
+.practice-progress progress::-webkit-progress-bar { background:var(--surface-soft); border-radius:99px; }
+.practice-progress progress::-webkit-progress-value { background:var(--accent); border-radius:99px; }
+.practice-progress progress::-moz-progress-bar { background:var(--accent); border-radius:99px; }
+.practice-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.5rem; }
+.practice-actions .button { min-height:2.35rem; padding-inline:.7rem; font-size:.74rem; }
+.practice-meta { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-bottom:.65rem; }
+.practice-stats { display:flex; flex-wrap:wrap; gap:.75rem 1rem; color:var(--text-muted); font-size:.72rem; }
+.practice-stats strong { color:var(--text); }
+.practice-stats .stat-correct strong { color:var(--success); }
+.practice-stats .stat-incorrect strong { color:var(--danger); }
+.practice-filter { display:flex; align-items:center; gap:.5rem; color:var(--text-muted); font-size:.75rem; font-weight:650; white-space:nowrap; }
+.practice-filter select { min-height:2.2rem; padding:.35rem 1.8rem .35rem .65rem; border:1px solid var(--border); border-radius:.6rem; color:var(--text); background:var(--surface); cursor:pointer; font-size:.75rem; }
+.practice-table-wrap { overflow:hidden; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--surface); box-shadow:var(--shadow-sm); }
+.practice-table-head { display:grid; grid-template-columns:minmax(9rem,.7fr) minmax(12rem,1.5fr) minmax(7rem,.55fr); gap:1rem; padding:.7rem 1rem; border-bottom:1px solid var(--border); color:var(--text-faint); font-size:.68rem; font-weight:750; letter-spacing:.05em; text-transform:uppercase; }
+.practice-list { display:grid; }
+.practice-row { display:grid; grid-template-columns:minmax(9rem,.7fr) minmax(12rem,1.5fr) minmax(7rem,.55fr); align-items:center; gap:1rem; min-height:6.5rem; padding:1rem; border-bottom:1px solid var(--border); transition:background-color 140ms ease; }
+.practice-row:last-child { border-bottom:0; }
+.practice-row:hover { background:var(--surface-tint); }
+.practice-row.status-correct { background:color-mix(in srgb,var(--success-soft) 30%,var(--surface)); }
+.practice-row.status-incorrect { background:color-mix(in srgb,var(--danger-soft) 30%,var(--surface)); }
+.practice-kanji { display:flex; align-items:center; gap:.7rem; min-width:0; }
+.practice-glyph { color:var(--text); font-family:"Noto Sans JP","Yu Gothic",sans-serif; font-size:2.6rem; font-weight:750; line-height:1; }
+.practice-count { display:inline-flex; align-items:center; min-height:1.45rem; padding:.22rem .48rem; border-radius:999px; color:var(--accent-strong); background:var(--accent-soft); font-size:.68rem; font-weight:750; white-space:nowrap; }
+.practice-answer { min-width:0; }
+.practice-answer input { width:100%; min-height:2.7rem; padding:.68rem .78rem; border:1px solid var(--border); border-radius:.65rem; color:var(--text); background:var(--surface-soft); outline:none; font-size:.86rem; transition:border-color 140ms ease,box-shadow 140ms ease,background-color 140ms ease; }
+.practice-answer input:focus { border-color:var(--accent); background:var(--surface); box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent); }
+.practice-answer-actions { display:flex; align-items:center; flex-wrap:wrap; gap:.45rem .75rem; min-height:1.5rem; margin-top:.35rem; }
+.practice-answer-actions .text-button { display:inline-flex; align-items:center; gap:.3rem; font-size:.7rem; }
+.revealed-answer { color:var(--text-muted); font-size:.72rem; font-weight:650; }
+.practice-result { display:flex; align-items:center; justify-content:flex-end; gap:.55rem; }
+.practice-status-label { min-width:4.2rem; color:var(--text-faint); font-size:.74rem; font-weight:750; text-align:right; }
+.status-correct .practice-status-label { color:var(--success); }
+.status-incorrect .practice-status-label { color:var(--danger); }
+.practice-check { min-height:2.35rem; padding-inline:.75rem; font-size:.72rem; }
+.practice-alert { display:flex; align-items:center; gap:.55rem; margin-bottom:.75rem; padding:.75rem .9rem; border:1px solid color-mix(in srgb,var(--danger) 28%,var(--border)); border-radius:.75rem; color:var(--danger); background:var(--danger-soft); font-size:.78rem; }
+.practice-alert > span { flex:1; }
+.practice-alert .text-button { color:var(--danger); }
+.practice-save-status { display:flex; align-items:center; justify-content:flex-end; gap:.3rem; min-height:1.6rem; margin-bottom:.35rem; color:var(--text-faint); font-size:.68rem; }
+.practice-save-status svg { color:var(--accent-strong); }
+.practice-state { display:grid; min-height:20rem; place-items:center; align-content:center; gap:.65rem; padding:2rem; border:1px dashed var(--border-strong); border-radius:var(--radius-md); color:var(--text-muted); background:color-mix(in srgb,var(--surface) 72%,transparent); text-align:center; }
+.practice-state h1,.practice-state h2,.practice-state p { margin:0; }
+.practice-state h1,.practice-state h2 { color:var(--text); font-size:1.1rem; }
+.practice-state p { max-width:30rem; font-size:.8rem; line-height:1.55; }
+.practice-state > svg { color:var(--accent-strong); }
+.practice-error > svg { color:var(--danger); }
+.practice-filter-empty { min-height:14rem; }
+.practice-spin { animation:practice-spin .8s linear infinite; }
+@keyframes practice-spin { to { transform:rotate(360deg); } }
+.practice-dialog-backdrop { position:fixed; inset:0; z-index:50; display:grid; place-items:center; padding:1rem; background:rgb(3 15 21 / .48); backdrop-filter:blur(3px); }
+.practice-dialog { width:min(100%,26rem); padding:1.4rem; border:1px solid var(--border); border-radius:var(--radius-md); color:var(--text-muted); background:var(--surface); box-shadow:var(--shadow-md); }
+.practice-dialog h2 { margin:.75rem 0 .5rem; color:var(--text); font-size:1.15rem; }
+.practice-dialog p { margin:0; font-size:.82rem; line-height:1.6; }
+.practice-dialog-icon { display:grid; width:2.45rem; height:2.45rem; place-items:center; border-radius:.7rem; color:var(--accent-strong); background:var(--accent-soft); }
+.practice-dialog .form-actions { display:flex; justify-content:flex-end; gap:.6rem; margin-top:1rem; }
+.practice-dialog .button { min-width:6rem; }
+
+@media (max-width:800px) {
+  .practice-heading { display:block; }
+  .practice-heading .phase-badge { display:inline-flex; margin-top:1rem; }
+  .practice-toolbar { align-items:stretch; flex-direction:column; }
+  .practice-actions { justify-content:flex-start; }
+  .practice-meta { align-items:stretch; flex-direction:column; }
+  .practice-filter { justify-content:space-between; }
+}
+@media (max-width:650px) {
+  .practice-table-head { display:none; }
+  .practice-row { grid-template-columns:minmax(0,1fr) auto; gap:.6rem .8rem; min-height:0; padding:1rem .75rem; }
+  .practice-kanji { grid-column:1; grid-row:1; }
+  .practice-answer { grid-column:1 / -1; grid-row:2; }
+  .practice-result { grid-column:2; grid-row:1; }
+  .practice-status-label { min-width:auto; }
+  .practice-check { display:none; }
+}
+@media (max-width:460px) {
+  .practice-actions { display:grid; grid-template-columns:1fr; }
+  .practice-actions .button { width:100%; }
+  .practice-stats { gap:.5rem .75rem; }
+  .practice-dialog .form-actions { display:grid; grid-template-columns:1fr 1fr; }
+  .practice-dialog .button { width:100%; }
+}
